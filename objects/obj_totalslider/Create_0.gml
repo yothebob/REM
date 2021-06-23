@@ -1,0 +1,1 @@
+global.totalslider = true;

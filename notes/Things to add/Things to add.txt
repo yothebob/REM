@@ -1,0 +1,13 @@
+Features that would be nice to add:
+- update pricing automaticly 
+- make mobile app version
+- clean up code & obsolete items 
+- GUI facelift?
+- add estimating for TR375,tr400
+- lerping on menus
+-add contol + z to undo
+- add actual saving and opening , maybe ini file? 
+- email quote 
+
+items to create
+- stair base plate

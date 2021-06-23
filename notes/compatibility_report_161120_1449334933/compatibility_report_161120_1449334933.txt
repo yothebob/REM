@@ -1,0 +1,21 @@
+Converting GML script: screen_save_dialog.gml
+Converted description /// @description  (filename):/// @param filename
+
+Converting GML script: screen_save_dialog.gml
+Converted description /// @description  (filename, x, y, w, h):/// @param filename
+/// @param  x
+/// @param  y
+/// @param  w
+/// @param  h
+
+Converting GML script: screen_save_dialog.gml
+Converted description /// @description  (surface, filename):/// @param surface
+/// @param  filename
+
+Converting GML script: screen_save_dialog.gml
+Converted description /// @description  (surface, filename, x, y, width, height):/// @param surface
+/// @param  filename
+/// @param  x
+/// @param  y
+/// @param  width
+/// @param  height
