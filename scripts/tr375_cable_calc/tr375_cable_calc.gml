@@ -6,7 +6,6 @@ function tr375_cable_calc()
 	var job = init.job;
 	
 	part.tr375.q += (ceil(job.stairlf/10)/2);
-	part.sds.q = ceil((((part.int90.q*10) + (part.int135.q*10) + (part.spl200.q*10))+(post.totalposts *2))/25); 
 
 	var endpost = get_integer("# of Terminal posts(POSTS THAT USE A TTHS/TTMS):", "");
 	var inter = get_integer("# of DT/90/1s posts that use 2 DP:" + "\n DO NOT DOUBLE COUNT POSTS" , "");
@@ -89,5 +88,6 @@ function tr375_cable_calc()
 	part.ep200.q -= part.ep200.q;
 	part.int135.q -= part.int135.q;
 	part.spl200.q -= part.spl200.q;
+	part.sds.q = ceil((((part.int90.q*10) + (part.int135.q*10) + (part.spl200.q*10))+(post.totalposts *2))/25); 
 	part.csp.q = 1;
 }

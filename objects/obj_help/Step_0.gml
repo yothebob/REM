@@ -18,6 +18,6 @@ if place_meeting(x,y,obj_mouse) and mouse_check_button_pressed(mb_left) or hotke
 	}
 	if link = 1
 	{
-	url_open("https://docs.google.com/presentation/d/1MqhIGRFv3eZPX36CM3o1InFKk-jyI12P0YFQysyNx_0/edit?usp=sharing");
+	url_open(working_directory + "index.html");
 	}
 }

@@ -7,8 +7,7 @@ if(global.calcslider = true)
 {
 // drawlabel
 draw_set_halign(fa_left);
-draw_text_color(x-offset.o1, y-30,"TR200 SMART CALCULATOR:", c_green, c_green, c_green, c_green, 1);
-
+draw_text_color(x-540, y-30,"Railing Calculator:", c_green, c_green, c_green, c_green, 1);
 //draw_lengths and numbers
 
 for (var i = 9; i > 0; i -= 1)
@@ -23,10 +22,10 @@ for (var j = 9; j > 0; j -= 1)
 	}
 
 if init.job.decklf < 1{
-		draw_text(x-offset.o2-40,y+270, "Total TR200 LF :" + (string(init.job.decklf)));
+		draw_text(x-offset.o2-40,y+270, "Total Deck LF :" + (string(init.job.decklf)));
 	}
 	else{
-		draw_text_color(x-offset.o2-40,y+270, "Total TR200 LF :" + (string(init.job.decklf)),c_green,c_green,c_green,c_green,1);
+		draw_text_color(x-offset.o2-40,y+270, "Total Deck LF :" + (string(init.job.decklf)),c_green,c_green,c_green,c_green,1);
 	}
 	
 if init.job.stairlf < 1{

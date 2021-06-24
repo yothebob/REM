@@ -1,0 +1,47 @@
+body{
+  font-family: Oswald;
+  text-align: center;
+  background-color: #027027;
+  margin: 0;
+  padding: 0;
+}
+.navbar{
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-color: black;
+  color: black;
+  padding: 20px;
+}
+div.navbar{
+  background-color: #ffffff;
+  width: 100vw;
+}
+.contact-container{
+  background-color: #ffffff;
+  width: 100vw;
+  left: 0;
+  right: 0;
+}
+.contact-modo{
+  display: inline-block;
+  position: relative;
+  top: -100px;
+  padding: 20px;
+  font-size: 20px;
+  width: 350px;
+}
+.contact-info{
+  padding: 50px;
+  display: inline-block;
+}
+.contact-socials{
+  text-decoration: none;
+  text-decoration-color: none;
+  display: inline-block;
+}
+.info-block{
+  margin: auto;
+  padding: 50px;
+  width:50%;
+}
