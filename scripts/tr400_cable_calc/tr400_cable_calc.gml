@@ -83,7 +83,9 @@ function tr400_cable_calc()
 	part.tt.q = ((threeside + endpost) * cables);
 	part.swage.q = ((part.dp.q + part.tt.q)/2);
 	part.aw30.q = (post.tallposts/2) *cables;
-	part.ep200.q = 0;
-	part.int135.q = 0;
-	part.int90.q = 0;
+	part.int90.q -= part.int90.q;
+	part.ep200.q -= part.ep200.q;
+	part.int135.q -= part.int135.q;
+	part.spl200.q -= part.spl200.q;
+	part.csp.q = 1;
 }

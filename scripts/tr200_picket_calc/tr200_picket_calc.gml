@@ -55,6 +55,6 @@ if job.infill == "picket"{
 	part.pvi.q = ceil((job.lf * 2) /10);
 	part.rcb112.q = ceil((post.stairposts*2)/6);
 	part.sds.q = ceil((((part.int90.q*10) + (part.int135.q*10) + (part.spl200.q*10))+(post.totalposts *5))/25);
-	
+	part.csp.q = 1;
 }
 }

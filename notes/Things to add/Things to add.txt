@@ -11,3 +11,7 @@ Features that would be nice to add:
 
 items to create
 - stair base plate
+- add TTHS long for staircases 
+
+BUGS TO FIX:
+- it asks to restart quote when you are restarting quote 

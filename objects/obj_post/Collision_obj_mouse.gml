@@ -21,6 +21,6 @@ if keyboard_check_pressed(vk_delete){
 	p.totalposts -= 1;
 	instance_destroy();
 	surface_set_target(control.surface);
-	draw_sprite(spr_fix, 0, mouse_x, mouse_y);
+	draw_sprite(spr_fix, 0, x, y);
 	surface_reset_target();
 }

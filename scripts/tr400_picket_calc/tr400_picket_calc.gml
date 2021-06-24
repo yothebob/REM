@@ -59,5 +59,6 @@ if job.infill == "picket"{
 	part.ep200.q -= part.ep200.q;
 	part.int135.q -= part.int135.q;
 	part.spl200.q -= part.spl200.q;
+	part.csp.q = 1;
 }
 }

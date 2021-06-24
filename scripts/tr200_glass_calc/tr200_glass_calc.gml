@@ -59,4 +59,5 @@ part.br200.q = ceil((job.lf/10)*1.1)/2;
 part.gvs_bot.q = ceil(job.lf/10);
 part.gvs_top.q = ceil(job.lf/10);
 part.sds.q = ceil((((part.int90.q*10) + (part.int135.q*10) + (part.spl200.q*10))+(post.totalposts *2))/25); 
+part.csp.q = 1;
 }
