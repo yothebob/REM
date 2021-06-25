@@ -1,4 +1,4 @@
-total = tr[1] + tr[2] + tr[3] + tr[4] + tr[5] + tr[6] + tr[7] + tr[8] + tr[9];
+
 
 if keyboard_check_pressed(ord("R")) or global.pressedtotal == 1
 {

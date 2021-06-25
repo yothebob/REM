@@ -24,7 +24,7 @@ if (mouse_check_button_released(mb_left) and global.tool == tool.cable)
 	release = true;
 	}
 	
-if (release == true and global.measurement > 1)
+if (release == true and global.measurement > .5)
 	{
 	surface_set_target(control.surface);
 	draw_set_color(c_black);

@@ -5,6 +5,15 @@ body{
   margin: 0;
   padding: 0;
 }
+h1{
+  font-size: 50px;
+}
+h2{
+  font-size: 35px;
+}
+h3{
+  font-size: 25px;
+}
 .navbar{
   font-size: 20px;
   display: inline-block;

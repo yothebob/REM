@@ -2,10 +2,10 @@
 
 // init tr array, tr remainders, and color/ color remainder
 for(var h=1;h<10;h++){
-tr[h] = 0;
-trr[h] = 0;
 c[h] = c_dkgray;
 cr[h] = c_dkgray;
+tr[h] = 0;
+trr[h] = 0;
 }
 
 total = 0;
@@ -20,11 +20,3 @@ o1 : 580,
 o2 : 475,
 o3 : 400,
 };
-
-color = 0;
-picket = 0;
-threeside = 0;
-oneside = 0;
-
-// total 
-totalcost = 0;

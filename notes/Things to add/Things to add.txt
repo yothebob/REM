@@ -3,11 +3,14 @@ Features that would be nice to add:
 - make mobile app version
 - clean up code & obsolete items 
 - GUI facelift?
-- add estimating for TR375,tr400
 - lerping on menus
 -add contol + z to undo
 - add actual saving and opening , maybe ini file? 
 - email quote 
+- when totaling maybe pull up a page with all the questions on one page (simular to a form)
+- change the measurement calculator to have as many lengths as you want, have once length is made you can
+click on it to update the length or delete it.
+
 
 items to create
 - stair base plate

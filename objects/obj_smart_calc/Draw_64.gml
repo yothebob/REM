@@ -45,10 +45,6 @@ if init.job.lf < 1{
 draw_text(x-offset.o1, y + offset.o3 -30,"Max len. to scrap? : " + string(remainder));
 draw_text(x-offset.o1,y + offset.o3,"% of wiggle room : " + string(fudge));
 
-	if (totalcost > 1){
-		draw_text_color(x-offset.o1-20,y+(offset.o2), " Total: " + (string(init.job.cost)) + " - " + string(init.job.cost*1.05),c_blue,c_blue,c_blue,c_blue,1);
-	}
-	else{
-		draw_text(x-offset.o1,y+(offset.o2), "Estimated Cost: " + (string(init.job.cost)));
-	}
+	
+draw_text(x-offset.o1,y+(offset.o2), "Estimated Cost: " + (string(init.job.cost)));
 }
