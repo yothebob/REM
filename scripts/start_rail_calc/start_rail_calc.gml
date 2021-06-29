@@ -162,7 +162,7 @@ function start_rail_calc()
 						exit;
 					}
 
-					else if show_question("Glass railing?"){
+					else{
 						job.infill = "glass";
 						switch init.job.tr{
 							case "TR200":

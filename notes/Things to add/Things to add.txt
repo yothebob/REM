@@ -18,3 +18,4 @@ items to create
 
 BUGS TO FIX:
 - it asks to restart quote when you are restarting quote 
+- FMPBS1 on csv reads from line 6. everything else reads from line 7...

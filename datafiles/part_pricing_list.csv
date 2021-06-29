@@ -351,7 +351,7 @@ Active,Inventory Part,TR175A  Blk,Slim Square Top Rail ( 18.25' )- Black,4000 · 
 Active,Inventory Part,TR175A  Br 18.5',Slim Square Top Rail ( 18.50' )- Bronze,4000 · Sales:4100 · Distribution,43.09,124
 Active,Inventory Part,TR175A  MF,Slim Square Top Rail ( 18.25' )- Mill Finish,4000 · Sales:4100 · Distribution,46.58,124
 Active,Inventory Part,TR175A Br,Slim Square Top Rail ( 20' )- Bronze,4000 · Sales:4100 · Distribution,46.58,134.1
-Active,Inventory Part,TR200 Blk,Top Rail 200 ( 20' )- Black,4000 · Sales:4100 · Distribution,71.15,162.70
+Active,Inventory Part,TR200 Blk,Top Rail 200 ( 20' )- Black,4000 · Sales:4100 · Distribution,71.15,162.7
 Active,Inventory Part,TR200 Br,Top Rail 200 ( 20' )- Bronze,4000 · Sales:4100 · Distribution,61.03,162.7
 Active,Inventory Part,TR200 Cl,Top Rail 200 ( 20' )- Clear Anodized,4000 · Sales:4100 · Distribution,79.76,221.27
 Active,Inventory Part,TR200 CP,"Top Rail 200 ( 20' )-  Cool Parchment, AT-0157",4000 · Sales:4100 · Distribution,93.04,223.3
@@ -544,7 +544,7 @@ Active,Inventory Assembly,FI- Br-Half Stick,Half Extrusion - Flat Infill (for Ca
 Active,Inventory Assembly,FI- Cl-Half Stick,Half Extrusion - Flat Infill (for Cable)  ( 10' )- Clear Anodized,4000 · Sales:4100 · Distribution,19.24,42.57
 Active,Inventory Assembly,FI- Mil-Half Stick,Half Extrusion - Flat Infill (for Cable)  ( 10' )- Mill Finish,4000 · Sales:4100 · Distribution,10.44,31.3
 Active,Inventory Assembly,FI- W-Half Stick,Half Extrusion - Flat Infill (for Cable)  ( 10' )- White,4000 · Sales:4100 · Distribution,10.31,31.3
-Active,Inventory Assembly,FMPBS 1- Blk,"Intermediate Fascia Mount Bracket 6"", with bottom plate - Black",4000 · Sales:4100 · Distribution,15.96,660.8
+Active,Inventory Assembly,FMPBS 1- Blk,"Intermediate Fascia Mount Bracket 6"", with bottom plate - Black",4000 · Sales:4100 · Distribution,66.8,66.8
 Active,Inventory Assembly,FMPBS 1- Br,"Intermediate Fascia Mount Bracket 6"", bottom plate - Bronze",4000 · Sales:4100 · Distribution,15.96,66.8
 Active,Inventory Assembly,FMPBS 1- Cl,"Intermediate Fascia Mount Bracket 6"", bottom plate - Clear Anodized",4000 · Sales:4100 · Distribution,15.96,90.85
 Active,Inventory Assembly,FMPBS 1- Mil,"Intermediate Fascia Mount Bracket 6"", with bottom - Mill Finish",4000 · Sales:4100 · Distribution,8.96,66.8

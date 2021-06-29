@@ -7,14 +7,12 @@ var item = variable_struct_get_names(init.parts_dict);
 
 	for(var i = 0;i < hh; i++){
 		for(var ii = 0; ii < array_length(item); ii++){
-			show_debug_message(string(csv[# 2,i]) + " == " + init.parts_dict[$ item[ii]].name);
 			if string(csv[# 2,i]) == init.parts_dict[$ item[ii]].name{
 				show_debug_message("Found match! updating...");
-				show_debug_message(csv[# 6,i]);
+				show_debug_message(string(csv[# 2,i]) + " == " + string(csv[# 6,i]));
 				try{
-					show_debug_message("before: " + string(init.parts_dict[$ item[ii]].cost));
 					init.parts_dict[$ item[ii]].cost = real(csv[# 6,i]);
-					show_debug_message("it worked! : " + string(init.parts_dict[$ item[ii]].cost));
+					show_debug_message("it worked! after : " + string(init.parts_dict[$ item[ii]].cost));
 				}
 				catch (exception){
 					show_debug_message(exception);
