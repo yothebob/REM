@@ -1,4 +1,4 @@
-
+total = tr[1] + tr[2] + tr[3] + tr[4] + tr[5] + tr[6] + tr[7] + tr[8] + tr[9];
 
 if keyboard_check_pressed(ord("R")) or global.pressedtotal == 1
 {
@@ -25,6 +25,7 @@ if keyboard_check_pressed(ord("R")) or global.pressedtotal == 1
 }
 
 // TR Calcuations ------------------------------------------------\\
+
 for (var i = 9; i > 0; i = i -1){
 	if tr[i] > 0{
 		c[i]= c_green;
@@ -101,6 +102,7 @@ case ord("0"):
 	init.job.stairlf = get_integer("Total Stair LF","");
 	break;
 }
+
 
 if global.totalstart == 1{
 	total_calc();

@@ -15,22 +15,32 @@ h3{
   font-size: 25px;
 }
 .navbar{
-  font-size: 20px;
-  display: inline-block;
+  font-size: 15px;
+  display: inline-flex;
+  bottom: -50px;
   text-decoration: none;
-  text-decoration-color: black;
   color: black;
-  padding: 20px;
+  padding: 0px 15px 0px 15px;
 }
+
 div.navbar{
   background-color: #ffffff;
-  width: 100vw;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.navbar-logo{
+  max-width: 100px;
+  position: relative;
+  bottom: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 .contact-container{
   background-color: #ffffff;
-  width: 100vw;
-  left: 0;
-  right: 0;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 .contact-modo{
   display: inline-block;
@@ -45,11 +55,16 @@ div.navbar{
   display: inline-block;
 }
 .contact-socials{
-  text-decoration: none;
-  text-decoration-color: none;
   display: inline-block;
 }
+.social-icon{
+  position: relative;
+  left: -20px;
+  padding: 10px;
+
+}
 .info-block{
+  //background: url("bg-alum.png");
   margin: auto;
   padding: 50px;
   width:50%;

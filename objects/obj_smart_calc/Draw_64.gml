@@ -14,12 +14,9 @@ for (var i = 9; i > 0; i -= 1)
     {	
     draw_text_color(x-offset.o1,(y-32) + (i * 30),"Length " + string(i) + " : " ,c[i],c[i],c[i],c[i],1);
 	draw_text_color(x-offset.o3,(y-32) + (i*30),"Scrap:" + string(trr[i]),cr[i],cr[i],cr[i],cr[i],1);
+	draw_text_color(x-offset.o2,(y-32) + (i * 30),tr[i],c[i],c[i],c[i],c[i],1);
 	}
 
-for (var j = 9; j > 0; j -= 1)
-    {	
-    draw_text_color(x-offset.o2,(y-32) + (j * 30),tr[j],c[j],c[j],c[j],c[j],1);
-	}
 
 if init.job.decklf < 1{
 		draw_text(x-offset.o2-40,y+270, "Total Deck LF :" + (string(init.job.decklf)));

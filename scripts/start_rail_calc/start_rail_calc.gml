@@ -15,7 +15,7 @@ function start_rail_calc()
 	// calculate tr using 'smart' calculator----------------
 			if obj_smart_calc.total > 1 and init.posts.totalposts > 0{
 				if os_get_config() == "Default"{
-					bubblesort(tr);
+					array_sort(tr,true);
 				}
 				for (var i = 9; i > 0; i = i - 1){
 					var check = find_remainder(tr[i]);
@@ -23,6 +23,9 @@ function start_rail_calc()
 						if tr[i] >= 20{
 							if tr[i] >20 and tr[i] < 30{
 								var k = (ceil((tr[i]/10))*10)/20;
+							}
+							else if tr[i] == 20{
+								var k = 1;
 							}
 							else{
 								var k = (ceil((tr[i]/19)));
@@ -126,40 +129,7 @@ function start_rail_calc()
 						}
 					}
 				}
-
-				if show_question("Picket railing?"){
-					job.infill = "picket";
-					switch init.job.tr{
-						case "TR200":
-							tr200_picket_calc();
-							break;
-						case "TR375":
-							tr375_picket_calc();
-							break;
-						case "TR400":
-							tr400_picket_calc();
-							break;
-					}
-					exit;
-				}
-
-				else if show_question("Glass railing?"){
-					job.infill = "glass";
-					switch init.job.tr{
-						case "TR200":
-							tr200_glass_calc();
-							break;
-						case "TR375":
-							tr375_glass_calc();
-							break;
-						case "TR400":
-							tr400_glass_calc();
-							break;
-					}
-					exit;
-				}
-
-				else{
+				if (post.po + post.os + post.dt + post.ts) > 0{
 					job.infill = "cable";
 					switch init.job.tr{
 						case "TR200":
@@ -173,6 +143,41 @@ function start_rail_calc()
 							break;
 					}
 					exit;
+				} 
+				else{
+					
+					if show_question("Picket railing?"){
+						job.infill = "picket";
+						switch init.job.tr{
+							case "TR200":
+								tr200_picket_calc();
+								break;
+							case "TR375":
+								tr375_picket_calc();
+								break;
+							case "TR400":
+								tr400_picket_calc();
+								break;
+						}
+						exit;
+					}
+
+					else if show_question("Glass railing?"){
+						job.infill = "glass";
+						switch init.job.tr{
+							case "TR200":
+								tr200_glass_calc();
+								break;
+							case "TR375":
+								tr375_glass_calc();
+								break;
+							case "TR400":
+								tr400_glass_calc();
+								break;
+						}
+						exit;
+					}
+
 				}
 			}
 		}

@@ -13,7 +13,7 @@
   "helpfile": "",
   "iosProps": true,
   "tvosProps": false,
-  "androidProps": true,
+  "androidProps": false,
   "installdir": "",
   "files": [
     {"filename":"screen_save_dialog.gml","origname":"extensions\\gml.gml","init":"","final":"","kind":2,"uncompress":false,"functions":[
@@ -109,7 +109,7 @@
   "tvosThirdPartyFrameworkEntries": [],
   "IncludedResources": [],
   "androidPermissions": [],
-  "copyToTargets": 113497714299118,
+  "copyToTargets": 35223026794656,
   "iosCocoaPods": "",
   "tvosCocoaPods": "",
   "iosCocoaPodDependencies": "",

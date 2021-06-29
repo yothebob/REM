@@ -1,6 +1,7 @@
 //TR200 Cal. values
 
 // init tr array, tr remainders, and color/ color remainder
+
 for(var h=1;h<10;h++){
 c[h] = c_dkgray;
 cr[h] = c_dkgray;

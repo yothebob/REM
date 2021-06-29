@@ -68,7 +68,7 @@ parts_dict = {
 	ts_fp56 : {name : "3S FP56- Blk", q : 0, cost : 83.2, index : 38},
 	po_fp56 : {name : "90 FP56- Blk", q : 0, cost : 83.2, index : 39},
 	dt_fp56 : {name : "DT FP56- Blk", q : 0, cost : 83.2, index : 40},
-	tr200 : {name : "TR200 Blk", q : 0, cost : 162.70, index : 41},
+	tr200 : {name : "TR200 Blk", q : 0, cost : 162.70, index : 41}, // 162.70
 	tr375 : {name : "TR375 Blk", q : 0, cost : 138.90, index : 42},
 	tr401 : {name : "TR400 Blk", q : 0, cost : 128.6, index : 43},
 	flat_infill : {name : "FI- Blk", q : 0, cost : 55.10, index : 44},
@@ -96,7 +96,7 @@ parts_dict = {
 	rcb112 : {name : "RCB1-12", q : 0, cost : 4.8, index : 66},
 	rcb212 : {name : "RCB2-12", q : 0, cost : 6.7, index : 67},
 	sds : {name : "SDS Bag 25 - SS Black", q : 0, cost : 4.9, index : 68},
-	nc20 : {name : "NC-20, Blk", q : 0, cost : 2.5, index : 69},
+	nc20 : {name : "NC-20, Blk", q : 0, cost : 3.5, index : 69},
 	cw20 : {name : "CW-20", q : 0, cost : 12.5, index : 70},
 	csp : {name : "CSP- Blk", q : 1, cost : 12.25, index : 71},
 	ledlock : {name : "LedLok- 5", q : 0, cost : .95, index : 72},

@@ -81,6 +81,7 @@ function tr200_cable_calc()
 	part.ipf.q = post.stairposts - post.tallposts;
 	part.dp.q = (oneside + threeside + (inter *2)) *cables;
 	part.tt.q = ((threeside + endpost) * cables);
+	part.cable.q = (job.lf * cables)* 1.15;
 	part.swage.q = ((part.dp.q + part.tt.q)/2);
 	part.aw30.q = (post.tallposts/2) *cables;
 	part.csp.q = 1;
