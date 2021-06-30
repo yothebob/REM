@@ -54,4 +54,5 @@ function tr375_picket_calc(){
 	part.spl200.q -= part.spl200.q;
 	part.sds.q = ceil((((part.int90.q*10) + (part.int135.q*10) + (part.spl200.q*10))+(post.totalposts *5))/25);
 	part.csp.q = 1;
+	global.pressedtotal = 0;
 }

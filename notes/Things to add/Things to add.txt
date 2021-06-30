@@ -1,7 +1,6 @@
 Features that would be nice to add:
-- update pricing automaticly 
+- update pricing automaticly online
 - make mobile app version
-- clean up code & obsolete items 
 - GUI facelift?
 - lerping on menus
 -add contol + z to undo
@@ -10,12 +9,11 @@ Features that would be nice to add:
 - when totaling maybe pull up a page with all the questions on one page (simular to a form)
 - change the measurement calculator to have as many lengths as you want, have once length is made you can
 click on it to update the length or delete it.
-
+- make tr lengths clickable to change that tr length
 
 items to create
 - stair base plate
 - add TTHS long for staircases 
 
 BUGS TO FIX:
-- it asks to restart quote when you are restarting quote 
 - FMPBS1 on csv reads from line 6. everything else reads from line 7...
