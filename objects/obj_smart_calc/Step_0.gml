@@ -1,7 +1,15 @@
-total = tr[1] + tr[2] + tr[3] + tr[4] + tr[5] + tr[6] + tr[7] + tr[8] + tr[9];
+
 
 if keyboard_check_pressed(ord("R")) or global.pressedtotal == 1
-{
+{	try{
+		total = tr[1] + tr[2] + tr[3] + tr[4] + tr[5] + tr[6] + tr[7] + tr[8] + tr[9];
+		var _exception = "please fix undefined value";
+		
+	}
+	catch(_exception){
+		show_message(_exception);
+		exit;
+	}
 	if init.parts_dict.nc20.q > 0 or init.parts_dict.tr200.q > 0{
 		if show_question("Do you want to restart your quote?"){
 			var key = variable_struct_get_names(init.parts_dict);
@@ -23,6 +31,19 @@ if keyboard_check_pressed(ord("R")) or global.pressedtotal == 1
 		start_rail_calc();	
 	}
 }
+
+
+if global.calcslider == true and obj_mouse.x >1620 and obj_mouse.x < 1760 and obj_mouse.y > 570 and obj_mouse.y < 835{
+	if mouse_check_button_pressed(mb_left){
+		var len = hh/9;
+		var pick = round((obj_mouse.y - 570)/len);
+		tr[pick] = get_integer("length?","");
+	}
+}
+
+if global.calcslider == true and mouse_check_button_pressed(mb_left) and obj_mouse.x >1700 and obj_mouse.x < 1860 and obj_mouse.y > 860 and obj_mouse.y < 900{
+		init.job.stairlf = get_integer("Total Stair LF","");
+	}
 
 // TR Calcuations ------------------------------------------------\\
 

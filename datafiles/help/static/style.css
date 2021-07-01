@@ -1,7 +1,8 @@
 body{
   font-family: Oswald;
   text-align: center;
-  background-color: #027027;
+  //background-color: #027027;
+  background: url("bg-alum.png");
   margin: 0;
   padding: 0;
 }
@@ -22,9 +23,19 @@ h3{
   color: black;
   padding: 0px 15px 0px 15px;
 }
-
+.navbar :hover{
+  color:#027027;
+}
+.navbar-selected{
+  color:#027027;
+  text-decoration: none;
+  padding: 0px 15px 0px 15px;
+  font-size: 15px;
+  display: inline-flex;
+  bottom: -50px;
+}
 div.navbar{
-  background-color: #ffffff;
+  background-color: #f2f3f4;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -37,7 +48,7 @@ div.navbar{
   margin: 0px;
 }
 .contact-container{
-  background-color: #ffffff;
+  background-color: #f2f3f4;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -65,7 +76,10 @@ div.navbar{
 }
 .info-block{
   //background: url("bg-alum.png");
+  //background-color: #f2f3f4;
+  background-color: #027027;
   margin: auto;
   padding: 50px;
   width:50%;
+  color: #f2f3f4;
 }
