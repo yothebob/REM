@@ -17,7 +17,8 @@ if (drawline == true){
 	if (mouse_check_button_released(mb_left)){
 		global.xending = mouse_x;
 		global.yending = mouse_y;
-
+		
+		
 		global.measurement = point_distance(global.xstar,global.ystar,global.xending,global.yending);
 		global.measurement = (round((global.measurement/global.scale)*2))/2;
 		global.measurement = abs(global.measurement);
