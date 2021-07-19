@@ -2,6 +2,15 @@
 
 var hotkey = keyboard_check(vk_control) and keyboard_check_pressed(ord("L"));
 
+if keyboard_check(vk_control) and keyboard_check_pressed(ord("Z")){
+	var line_values = lines[array_length(lines)-1]
+	surface_set_target(control.surface);
+	draw_line_width_color(line_values[0],line_values[1],line_values[2],line_values[3],control.width,c_white,c_white);
+	surface_reset_target();
+	array_delete(lines,array_length(lines)-1,1);
+}
+
+
 if mouse_check_button_pressed(mb_left) or hotkey{
 
 	if distance_to_point(mouse_x,mouse_y)<= 1 or hotkey
@@ -12,9 +21,6 @@ if mouse_check_button_pressed(mb_left) or hotkey{
 	}
 	//Set the start point of the line
 	if global.tool = tool.line {
-		
-		
-		
 		holding = true;
 		x1 = round(mouse_x/global.gridsize)*global.gridsize;
 		y1 = round(mouse_y/global.gridsize)*global.gridsize;
@@ -40,9 +46,10 @@ if mouse_check_button_released(mb_left) {
 		
 		draw_set_color(color);
 		surface_set_target(control.surface);
-		draw_line_width(x1,y1,x2,y2,control.width);
 		draw_set_color(color);
-		draw_line_color(x1,y1,x2,y2,color,color);
+		draw_line_width_color(x1,y1,x2,y2,control.width,color,color);
+		array_insert(lines,array_length(lines),[x1,y1,x2,y2]);
+		show_debug_message(lines);
 		surface_reset_target();
 	}
 }

@@ -1,5 +1,3 @@
-//draw_self();
-
 
 
 if (drawline == true)
@@ -23,21 +21,25 @@ if (mouse_check_button_released(mb_left) and global.tool == tool.cable)
 	{
 	release = true;
 	}
-	
+
+//draw line measurements	
 if (release == true and global.measurement > .5)
 	{
 	surface_set_target(control.surface);
 	draw_set_color(c_black);
+	//draw left of line
 	if abs(xStart - mouse_x) < 100 and (yStart - mouse_y) < 0{
 		draw_text( xStart + ((xStart - mouse_x)/2)+15,lerp(yStart,mouse_y,.5), string(global.measurement));
 	}
+	//draw right
 	else if abs(xStart - mouse_x) < 100 and (yStart - mouse_y) > 0{
 		draw_text( xStart + ((xStart - mouse_x)/2)-15,lerp(yStart,mouse_y,.5), string(global.measurement));
 	}
+	//draw top
 	else if abs(yStart - mouse_y) < 100 and (xStart - mouse_x) < 0{
 		draw_text( lerp(xStart,mouse_x,.5),lerp(yStart,mouse_y,.5)-25, string(global.measurement));
 	}
-	else {
+	else {//draw bottom
 		draw_text( lerp(xStart,mouse_x,.5),lerp(yStart,mouse_y,.5)+6, string(global.measurement));
 	}
 	surface_reset_target();
@@ -65,4 +67,6 @@ if (drawline == true)
 		}
 	}
 }
+
+
 
