@@ -41,7 +41,7 @@ if mouse_check_button_released(mb_left) {
 		}
 
 		//Draw the line (add line to array to draw)
-		array_insert(lines,array_length(lines),[x1,y1,x2,y2,color]);
+		array_insert(lines,array_length(lines),[x1,y1,x2,y2,color,control.width]);
 	}
 }
 

@@ -5,7 +5,8 @@ var hotkey = keyboard_check(vk_control) and keyboard_check_pressed(ord("O"));
 if mouse_check_button_pressed(mb_left) && distance_to_point(mouse_x,mouse_y) <= 1 or hotkey {
 	var file = get_open_filename("drawing|*.png", "");
 	if file != "" {
-		var opened_image = sprite_add(file,1,true,true,32,32);
+		opened = true;
+		opened_image = sprite_add(file,1,true,true,32,32);
 		var xscale = 1980/sprite_get_width(opened_image);
 		var yscale = 1080/sprite_get_height(opened_image);
 		surface_set_target(control.surface);

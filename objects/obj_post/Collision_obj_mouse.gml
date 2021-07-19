@@ -2,7 +2,6 @@ var p = init.posts;
 
 if keyboard_check_pressed(vk_delete){
 	var found = find_post(id);
-	show_debug_message(found)
 	switch id.post_type{
 		case "UD":
 			p.ud -= 1;
