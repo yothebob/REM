@@ -2,19 +2,17 @@
 
 var hotkey = keyboard_check(vk_control) and keyboard_check_pressed(ord("L"));
 
+//delete last drawn line
 if keyboard_check(vk_control) and keyboard_check_pressed(ord("Z")){
-	var line_values = lines[array_length(lines)-1]
-	surface_set_target(control.surface);
-	draw_line_width_color(line_values[0],line_values[1],line_values[2],line_values[3],control.width,c_white,c_white);
-	surface_reset_target();
-	array_delete(lines,array_length(lines)-1,1);
+	if array_length(lines) >= 1{
+		array_delete(lines,array_length(lines)-1,1);
+	}
 }
 
 
 if mouse_check_button_pressed(mb_left) or hotkey{
 
-	if distance_to_point(mouse_x,mouse_y)<= 1 or hotkey
-	{
+	if distance_to_point(mouse_x,mouse_y)<= 1 or hotkey{
 		control.width = 3;
 		global.tool = tool.line;
 		window_set_cursor(cr_default);
@@ -37,20 +35,13 @@ if mouse_check_button_released(mb_left) {
 			var s = saturation_bar.sliders.x-saturation_bar.sliders.dist;
 			var v = value_bar.sliders.x-value_bar.sliders.dist;
 
-			var color = make_color_hsv(h,s,v);
+			color = make_color_hsv(h,s,v);
 		}else{
-			var color = make_color_rgb(control.red,control.green,control.blue);
+			color = make_color_rgb(control.red,control.green,control.blue);
 		}
 
-		//Draw the line
-		
-		draw_set_color(color);
-		surface_set_target(control.surface);
-		draw_set_color(color);
-		draw_line_width_color(x1,y1,x2,y2,control.width,color,color);
-		array_insert(lines,array_length(lines),[x1,y1,x2,y2]);
-		show_debug_message(lines);
-		surface_reset_target();
+		//Draw the line (add line to array to draw)
+		array_insert(lines,array_length(lines),[x1,y1,x2,y2,color]);
 	}
 }
 

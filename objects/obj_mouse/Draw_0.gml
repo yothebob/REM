@@ -29,11 +29,11 @@ if (release == true and global.measurement > .5)
 	draw_set_color(c_black);
 	//draw left of line
 	if abs(xStart - mouse_x) < 100 and (yStart - mouse_y) < 0{
-		draw_text( xStart + ((xStart - mouse_x)/2)+15,lerp(yStart,mouse_y,.5), string(global.measurement));
+		draw_text( xStart + ((xStart - mouse_x)/2)+20,lerp(yStart,mouse_y,.5), string(global.measurement));
 	}
 	//draw right
 	else if abs(xStart - mouse_x) < 100 and (yStart - mouse_y) > 0{
-		draw_text( xStart + ((xStart - mouse_x)/2)-15,lerp(yStart,mouse_y,.5), string(global.measurement));
+		draw_text( xStart + ((xStart - mouse_x)/2)-20,lerp(yStart,mouse_y,.5), string(global.measurement));
 	}
 	//draw top
 	else if abs(yStart - mouse_y) < 100 and (xStart - mouse_x) < 0{

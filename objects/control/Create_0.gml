@@ -20,7 +20,6 @@ green = 0;
 red = 0;
 
 index = 0;
-b_array = [];
 
 //An enum and global variable to manage what tool is selected
 enum tool {

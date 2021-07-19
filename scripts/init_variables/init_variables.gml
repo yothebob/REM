@@ -8,7 +8,7 @@ posts = {
 	po : 0,
 	tallposts : 0,
 	totalposts : 0,
-	stairposts : 0
+	stairposts : 0,
 }
 
 //line drawing and scaling

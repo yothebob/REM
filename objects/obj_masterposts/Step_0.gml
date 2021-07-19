@@ -32,6 +32,7 @@ var p = init.posts;
 			case "UD":
 				p.ud += 1;
 				p.totalposts += 1;
+				array_insert(init.post_x_y,array_length(init.post_x_y),[round(mouse_x/global.gridsize)*global.gridsize,round(mouse_y/global.gridsize)*global.gridsize,4]);
 				with(instance_create_layer(round(mouse_x/global.gridsize)*global.gridsize,round(mouse_y/global.gridsize)*global.gridsize, "Instances", obj_post)){
 					post_type = "UD";
 					image_index = 4;
@@ -40,6 +41,7 @@ var p = init.posts;
 			case "DT":
 				p.dt += 1;
 				p.totalposts += 1;
+				array_insert(init.post_x_y,array_length(init.post_x_y),[round(mouse_x/global.gridsize)*global.gridsize,round(mouse_y/global.gridsize)*global.gridsize,3]);
 				with(instance_create_layer(round(mouse_x/global.gridsize)*global.gridsize,round(mouse_y/global.gridsize)*global.gridsize, "Instances", obj_post)){
 					post_type = "DT";
 					image_index = 3;
@@ -48,6 +50,7 @@ var p = init.posts;
 			case "1S":
 				p.os += 1;
 				p.totalposts += 1;
+				array_insert(init.post_x_y,array_length(init.post_x_y),[round(mouse_x/global.gridsize)*global.gridsize,round(mouse_y/global.gridsize)*global.gridsize,0])
 				with(instance_create_layer(round(mouse_x/global.gridsize)*global.gridsize,round(mouse_y/global.gridsize)*global.gridsize, "Instances", obj_post)){
 					post_type = "1S";
 					image_index = 0;
@@ -56,6 +59,7 @@ var p = init.posts;
 			case "3S":
 				p.ts += 1;
 				p.totalposts += 1;
+				array_insert(init.post_x_y,array_length(init.post_x_y),[round(mouse_x/global.gridsize)*global.gridsize,round(mouse_y/global.gridsize)*global.gridsize,1])
 				with(instance_create_layer(round(mouse_x/global.gridsize)*global.gridsize,round(mouse_y/global.gridsize)*global.gridsize, "Instances", obj_post)){
 					post_type = "3S";
 					image_index = 1;
@@ -64,6 +68,7 @@ var p = init.posts;
 			case "90":
 				p.po += 1;
 				p.totalposts += 1;
+				array_insert(init.post_x_y,array_length(init.post_x_y),[round(mouse_x/global.gridsize)*global.gridsize,round(mouse_y/global.gridsize)*global.gridsize,2])
 				with(instance_create_layer(round(mouse_x/global.gridsize)*global.gridsize,round(mouse_y/global.gridsize)*global.gridsize, "Instances", obj_post)){
 					post_type = "90";
 					image_index = 2;

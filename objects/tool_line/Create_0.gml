@@ -10,3 +10,4 @@ image_speed = 0;
 tick = 10;
 
 lines = [];
+color = "";
