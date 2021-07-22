@@ -7,3 +7,5 @@ y2 = y;
 
 image_speed = 0;
 tick = 10;
+color = control.picked_color;
+rectangles = [];

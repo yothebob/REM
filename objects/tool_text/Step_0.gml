@@ -8,14 +8,14 @@ global.tool = tool.text;
 }
 
 //Change the image when the tool is selected
-if global.tool = tool.text || distance_to_point(mouse_x,mouse_y)<=1 {
+if global.tool == tool.text || distance_to_point(mouse_x,mouse_y)<=1 {
 	image_index = 1;
 }else{
 	image_index = 0;
 }
 
 //Change the cursor sprite to pen
-if global.tool = tool.text {
+if global.tool == tool.text {
 	window_set_cursor(cr_beam);
 	
 	//Check where to write the text
@@ -41,11 +41,9 @@ if global.tool = tool.text {
 			//Ask what to write
 			currenttext = get_string("Text to draw:","");
 		
-			//Write it
-			surface_set_target(control.surface);
-			draw_set_color(color);
-			draw_text(selectedpointx,selectedpointy,currenttext);
-			surface_reset_target();
+			//Write it (using arrays to store x,y,text and color for undoing and saving)
+			array_insert(init.things_drawn,array_length(init.things_drawn),"TEXT");
+			array_insert(texts,array_length(texts),[selectedpointx,selectedpointy,currenttext,color]);
 			stop = true;
 			
 		}

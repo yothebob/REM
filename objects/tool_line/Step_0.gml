@@ -2,13 +2,6 @@
 
 var hotkey = keyboard_check(vk_control) and keyboard_check_pressed(ord("L"));
 
-//delete last drawn line
-if keyboard_check(vk_control) and keyboard_check_pressed(ord("Z")){
-	if array_length(lines) >= 1{
-		array_delete(lines,array_length(lines)-1,1);
-	}
-}
-
 
 if mouse_check_button_pressed(mb_left) or hotkey{
 
@@ -41,6 +34,7 @@ if mouse_check_button_released(mb_left) {
 		}
 
 		//Draw the line (add line to array to draw)
+		array_insert(init.things_drawn,array_length(init.things_drawn),"LINE");
 		array_insert(lines,array_length(lines),[x1,y1,x2,y2,color,control.width]);
 	}
 }

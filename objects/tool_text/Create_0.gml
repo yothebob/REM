@@ -6,3 +6,5 @@ selectedpointy = 0;
 currenttext = "";
 stop = false;
 tick = 10;
+
+texts = [];
