@@ -13,4 +13,5 @@ if keyboard_check(vk_control) and keyboard_check_pressed(ord("Z")) and array_len
 	check_things_drawn_for(tool_line.lines,"LINE");
 	check_things_drawn_for(tool_rectangle.rectangles,"RECTANGLE");
 	check_things_drawn_for(tool_text.texts,"TEXT");	
+	//check_things_drawn_for(init.post_x_y,"POST");
 }

@@ -36,6 +36,8 @@ if mouse_check_button_released(mb_left) {
 		//Draw the line (add line to array to draw)
 		array_insert(init.things_drawn,array_length(init.things_drawn),"LINE");
 		array_insert(lines,array_length(lines),[x1,y1,x2,y2,color,control.width]);
+		show_debug_message(init.things_drawn);
+		show_debug_message(lines);
 	}
 }
 

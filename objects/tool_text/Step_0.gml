@@ -44,6 +44,8 @@ if global.tool == tool.text {
 			//Write it (using arrays to store x,y,text and color for undoing and saving)
 			array_insert(init.things_drawn,array_length(init.things_drawn),"TEXT");
 			array_insert(texts,array_length(texts),[selectedpointx,selectedpointy,currenttext,color]);
+			show_debug_message(init.things_drawn);
+			show_debug_message(texts);
 			stop = true;
 			
 		}

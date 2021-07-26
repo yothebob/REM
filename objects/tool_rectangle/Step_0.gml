@@ -30,6 +30,8 @@ if mouse_check_button_released(mb_left) {
 		// add rectangle to arrays (for undoing and saving)
 		array_insert(rectangles,array_length(rectangles),[x1,y1,x2,y2,control.width,color]);
 		array_insert(init.things_drawn,array_length(init.things_drawn),"RECTANGLE");
+		show_debug_message(init.things_drawn);
+		show_debug_message(rectangles);
 	}
 }
 
