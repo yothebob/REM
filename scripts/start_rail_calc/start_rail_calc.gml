@@ -111,10 +111,10 @@ function start_rail_calc()
 					}
 				}
 				if show_question("36 inch railing?") {
-					global.threesix = true;
+					job.height = "36";
 				}
 				else {
-					global.threesix = false;
+					job.height = "42";
 				}
 				job.decklf = tr[1] + tr[2] + tr[3] + tr[4] + tr[5] + tr[6] + tr[7] + tr[8] + tr[9];
 				job.lf = job.decklf + job.stairlf;

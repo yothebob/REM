@@ -1,0 +1,15 @@
+manual input
+" # of stair posts: "," # of tall Stair posts: ","# of endposts: ", "# of 135 posts : ","# of 90's "
+
+boolean_input 
+"are you mounting to concrete?","36 inch railing?"
+
+if picket 
+	pass
+
+if glass
+	"# of total panels needed?",
+
+if cable
+	"# of Terminal posts(POSTS THAT USE A TTHS/TTMS):","# of DT/90/1s posts that use 2 DP:" + "\n DO NOT DOUBLE COUNT POSTS",
+	"# of 1s posts (DO NOT DOUBLE COUNT):"

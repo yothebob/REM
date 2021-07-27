@@ -15,17 +15,17 @@ if job.infill == "picket"{
 		part.rcb1.q = ((post.totalposts - post.stairposts) *2);
 	}
 	// post section
-	if global.threesix == true and global.fascia == false{
+	if job.height == "36" and global.fascia == false{
 		part.ud_p362.q = post.totalposts - post.stairposts;// deck posts
 		part.ud_p361.q = post.stairposts - post.tallposts;//stair intermediate posts
 		part.ud_p421.q = post.tallposts;//start/end stair posts
 	}
-	else if global.threesix == false and global.fascia == false{
+	else if job.height == "42" and global.fascia == false{
 		part.ud_p422.q = post.totalposts - post.stairposts;// deck posts
 		part.ud_p361.q = post.stairposts - post.tallposts;//stair intermediate posts
 		part.ud_p421.q = post.tallposts;//start/end stair posts
 	}
-	else if global.threesix == true and global.fascia == true{
+	else if job.height == "36" and global.fascia == true{
 		part.ud_fp45.q = post.totalposts - post.tallposts;// intermediate stair/deck posts
 		part.ud_fp56.q = post.tallposts;//start/end stair posts
 		part.fmpbs1.q = post.totalposts - part.int90.q;
@@ -38,7 +38,7 @@ if job.infill == "picket"{
 	}
 	
 	// 36" rail parts 
-	if global.threesix == true{
+	if job.height == "36"{
 		part.pt360.q = job.lf *3;
 	}
 	else{

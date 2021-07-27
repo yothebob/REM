@@ -1,5 +1,5 @@
 Features that would be nice to add:
-- update pricing automaticly online
+- update pricing automaticly (ONLINE)
 - make mobile app version
 - GUI facelift?
 - lerping on menus
@@ -19,3 +19,11 @@ control + z undo was added. undo features only work with lines, text, rectangles
 - lines,rectangles, text and posts are not drawing to surface until ready to save. I need to make everything else not draw 
 to the surface.
 
+
+	THINGS TO ADD TO INSTRUCTIONS
+		- explain what an end post is. 
+		- explain fasica vs deck mount 
+		- explain stair posts (tall stair posts vs intermediate stair posts)
+		- explain cable vs glass vs picket
+		- explain 135 degree posts
+		

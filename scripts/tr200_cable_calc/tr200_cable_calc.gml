@@ -14,11 +14,11 @@ function tr200_cable_calc()
 	var cables = 10;
 		
 	if !show_question("BR?"){
-		if global.threesix == true{ cables = 10;}
+		if job.height == "36"{ cables = 10;}
 		else{ cables = 12;}
 	}
 	else{
-		if global.threesix == true{cables = 9;}
+		if job.height == "36"{cables = 9;}
 		else{cables = 11;}
 	
 		if post.stairposts < 1{
@@ -34,7 +34,7 @@ function tr200_cable_calc()
 			
 	}
 		// post section
-	if global.threesix == true and global.fascia == false{
+	if job.height == "36" and global.fascia == false{
 		part.dt_p362.q = post.dt - part.int135.q;// deck posts
 		part.os_p362.q = post.os;
 		part.ts_p362.q = post.ts;
@@ -42,7 +42,7 @@ function tr200_cable_calc()
 		part.ud_p361.q = post.stairposts - post.tallposts;//stair intermediate posts
 		part.ud_p421.q = post.tallposts;//start/end stair posts
 	}
-	else if global.threesix == false and global.fascia == false{
+	else if job.height == "42" and global.fascia == false{
 		part.dt_p422.q = post.dt;// deck posts
 		part.os_p422.q = post.os;
 		part.ts_p422.q = post.ts;
@@ -50,7 +50,7 @@ function tr200_cable_calc()
 		part.ud_p361.q = post.stairposts - post.tallposts;//stair intermediate posts
 		part.ud_p421.q = post.tallposts;//start/end stair posts
 	}
-	else if global.threesix == true and global.fascia == true{
+	else if job.height == "36" and global.fascia == true{
 		part.dt_fp45.q = post.dt;// deck posts
 		part.os_fp45.q = post.os;
 		part.ts_fp45.q = post.ts;
