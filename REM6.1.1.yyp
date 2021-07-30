@@ -94,6 +94,7 @@
     {"id":{"name":"alumarail_background","path":"sprites/alumarail_background/alumarail_background.yy",},"order":6,},
     {"id":{"name":"save","path":"objects/save/save.yy",},"order":4,},
     {"id":{"name":"open","path":"objects/open/open.yy",},"order":5,},
+    {"id":{"name":"export_csv_js","path":"extensions/export_csv_js/export_csv_js.yy",},"order":1,},
     {"id":{"name":"spr_mask","path":"sprites/spr_mask/spr_mask.yy",},"order":5,},
     {"id":{"name":"new","path":"objects/new/new.yy",},"order":6,},
     {"id":{"name":"obj_zoom","path":"objects/obj_zoom/obj_zoom.yy",},"order":7,},
