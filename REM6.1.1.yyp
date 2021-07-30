@@ -188,7 +188,7 @@
   ],
   "IncludedFiles": [
     {"CopyToMask":-1,"filePath":"datafiles/help","resourceVersion":"1.0","name":"index.html","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles/help","resourceVersion":"1.0","name":"download.html","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/help","resourceVersion":"1.0","name":"started.html","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/help","resourceVersion":"1.0","name":"icon.html","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/help","resourceVersion":"1.0","name":"drawing.html","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/help","resourceVersion":"1.0","name":"porting.html","resourceType":"GMIncludedFile",},

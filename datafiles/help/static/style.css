@@ -1,3 +1,9 @@
+
+html{
+    width:100%;
+    height:100%;
+    font-size: 20px;
+}
 body{
   font-family: Oswald;
   text-align: center;
@@ -8,27 +14,39 @@ body{
   width: auto;
   height: 100%;
 }
-html{
-    width:100%;
-    height:100%;
-}
 h1{
-  font-size: 50px;
+  font-size: 2.75rem;
 }
 h2{
-  font-size: 35px;
+  font-size: 2.25rem;
 }
 h3{
-  font-size: 25px;
+  font-size: 1.25rem;
 }
 .navbar{
-  font-size: 15px;
   display: inline-flex;
-  width: auto;
-  bottom: -50px;
+  width: 100%;
+  bottom: -2.5rem;
   text-decoration: none;
   color: black;
-  padding: 0px 15px 0px 15px;
+  padding: 0rem .5rem 0rem .5rem;
+}
+
+@media only screen and (max-width: 1670px){
+  .navbar{
+    display: inline-flex;
+    width: 100%;
+    bottom: -2.5rem;
+    text-decoration: none;
+    color: black;
+    padding: 0rem .25rem 0rem .25rem;
+  }
+  .navbar h2 {
+    font-size: 1rem;
+  }
+  .navbar-logo{
+    display: none;
+  }
 }
 .navbar :hover{
   color:#027027;
@@ -36,40 +54,39 @@ h3{
 .navbar-selected{
   color:#027027;
   text-decoration: none;
-  padding: 0px 15px 0px 15px;
-  font-size: 15px;
+  padding: 0rem .75rem 0rem .75rem;
   display: inline-flex;
-  bottom: -50px;
+  bottom: -2.5rem;
 }
 div.navbar{
   background-color: #f2f3f4;
-  width: auto;
-  padding: 0px;
-  margin: 0px;
+  width: 100%;
+  padding: 0rem;
+  margin: 0rem;
 }
 .navbar-logo{
-  max-width: 100px;
+  max-width: 100%;
   position: relative;
-  bottom: 0px;
-  padding: 0px;
-  margin: 0px;
+  bottom: 0rem;
+  padding: 0rem;
+  margin: 0rem;
 }
 .contact-container{
   background-color: #f2f3f4;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
+  width: auto;
+  padding: 0rem;
+  margin: 0rem;
 }
 .contact-modo{
   display: inline-block;
   position: relative;
-  padding: 20px;
-  top: -100px;
-  font-size: 20px;
-  width: 350px;
+  padding: 1rem;
+  top: -5rem;
+  font-size: 1rem;
+  width: 17.5rem;
 }
 .contact-info{
-  padding: 50px;
+  padding: 2.5rem;
   display: inline-block;
 }
 .contact-socials{
@@ -77,8 +94,8 @@ div.navbar{
 }
 .social-icon{
   position: relative;
-  left: -20px;
-  padding: 10px;
+  left: -1rem;
+  padding: .5rem;
 
 }
 .info-block{
@@ -86,7 +103,11 @@ div.navbar{
   //background-color: #f2f3f4;
   background-color: #027027;
   margin: auto;
-  padding: 50px;
+  padding: 2.5rem;
   width:50%;
   color: #f2f3f4;
+}
+
+.info-block ul{
+  list-style: none;
 }
