@@ -118,9 +118,9 @@ function start_rail_calc()
 				}
 				job.decklf = tr[1] + tr[2] + tr[3] + tr[4] + tr[5] + tr[6] + tr[7] + tr[8] + tr[9];
 				job.lf = job.decklf + job.stairlf;
-				part.ep200.q = get_integer("# of endposts: ","");
+				part.ep200.q = get_integer("# of endposts: ",obj_post_layer.end_posts);
 				part.int135.q = get_integer( "# of 135 posts : ","");
-				part.int90.q = get_integer("# of 90's ","");
+				part.int90.q = get_integer("# of 90's ",obj_post_layer.corner_posts);
 				
 				if init.job.tr == "TR200"{
 					for (var a = 9; a > 0 ; a = a - 1){// spl200 calc.----------------------------------------

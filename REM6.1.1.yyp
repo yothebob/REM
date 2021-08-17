@@ -70,6 +70,7 @@
     {"id":{"name":"tr400_picket_calc","path":"scripts/tr400_picket_calc/tr400_picket_calc.yy",},"order":2,},
     {"id":{"name":"control","path":"objects/control/control.yy",},"order":0,},
     {"id":{"name":"obackground","path":"objects/obackground/obackground.yy",},"order":1,},
+    {"id":{"name":"obj_post_layer","path":"objects/obj_post_layer/obj_post_layer.yy",},"order":23,},
     {"id":{"name":"hue_bar","path":"objects/hue_bar/hue_bar.yy",},"order":1,},
     {"id":{"name":"obj_scale","path":"objects/obj_scale/obj_scale.yy",},"order":0,},
     {"id":{"name":"saturation_bar","path":"objects/saturation_bar/saturation_bar.yy",},"order":2,},

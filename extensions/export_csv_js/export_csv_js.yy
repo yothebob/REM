@@ -23,7 +23,7 @@
           ],"resourceVersion":"1.0","name":"exportToCsv","tags":[],"resourceType":"GMExtensionFunction",},
       ],"constants":[
         {"value":"","hidden":false,"resourceVersion":"1.0","name":"export_csv_js_Macro1","tags":[],"resourceType":"GMExtensionConstant",},
-      ],"ProxyFiles":[],"copyToTargets":-1,"order":[
+      ],"ProxyFiles":[],"copyToTargets":153157610357391532,"order":[
         {"name":"exportToCsv","path":"extensions/export_csv_js/export_csv_js.yy",},
       ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
   ],
@@ -51,7 +51,7 @@
   "tvosThirdPartyFrameworkEntries": [],
   "IncludedResources": [],
   "androidPermissions": [],
-  "copyToTargets": -1,
+  "copyToTargets": 153157610357391532,
   "iosCocoaPods": "",
   "tvosCocoaPods": "",
   "iosCocoaPodDependencies": "",
