@@ -1,0 +1,3 @@
+head = undefined;
+tail = undefined;
+
