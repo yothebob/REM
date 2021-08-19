@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "icons",
-    "path": "folders/Objects/Draw & Color picker/icons.yy",
+    "name": "Mechanics",
+    "path": "folders/Objects/Mechanics.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_post_layer",

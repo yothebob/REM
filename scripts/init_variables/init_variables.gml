@@ -122,7 +122,7 @@ job = {
 	contact : "",
 	tr : "TR200",
 	br : "",
-	infill : "cable",
+	infill : "picket",
 	date : (string(current_hour) + string(current_month) + string(current_day) + string(current_year)),
 	cost : 0,
 	height : "",

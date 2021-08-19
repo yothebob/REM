@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "icons",
-    "path": "folders/Objects/Draw & Color picker/icons.yy",
+    "name": "linked list",
+    "path": "folders/Objects/Mechanics/linked list.yy",
   },
   "resourceVersion": "1.0",
   "name": "node",

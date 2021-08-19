@@ -1,3 +1,4 @@
+#region //undrilled posts
 if init.job.infill == "picket" or init.job.infill == "glass"{
 	if mouse_check_button_released(mb_left) and global.tool == tool.cable and global.measurement > 1{
 	
@@ -68,9 +69,9 @@ if init.job.infill == "picket" or init.job.infill == "glass"{
 	}
 }
 
+#endregion
 
-
-
+#region //drilled posts
 else if init.job.infill == "cable"{
 	// store each post in array as [x,y,corner]
 	
@@ -173,7 +174,7 @@ else if init.job.infill == "cable"{
 					var nearest_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
 				}
 				else{
-					var_nearest_post = linked_list;
+					var nearest_post = linked_list;
 				}
 				
 				if abs(nearest_post.x - current_node.post_values[0] ) < post_buffer and abs(nearest_post.y - current_node.post_values[1] ) < post_buffer{
@@ -250,3 +251,5 @@ else if init.job.infill == "cable"{
 		}
 	}
 }
+
+#endregion 
