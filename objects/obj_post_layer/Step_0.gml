@@ -110,13 +110,14 @@ else if init.job.infill == "cable"{
 					break;
 				}
 			} 
+			
 			if need_start_post == true{
 				current_list = instance_create_depth(1,1,1,linked_list);
 				add_node(current_list,instance_create_depth(1,1,1,node));
 				current_list.head.post_values = [global.xstar,global.ystar,false];
 				array_insert(obj_post_layer.list_sections,array_length(obj_post_layer.list_sections),current_list.id);
 			}
-		}else{
+		}else{//place post if there are no posts
 			current_list = instance_create_depth(1,1,1,linked_list);
 			add_node(current_list,instance_create_depth(1,1,1,node));
 			current_list.head.post_values = [global.xstar,global.ystar,false];
@@ -152,12 +153,10 @@ else if init.job.infill == "cable"{
 			}
 		
 			if need_end_post == true{
-				//current_list = instance_create_depth(1,1,1,linked_list);
 				add_node(current_list,instance_create_depth(1,1,1,node));
 				current_list.tail.post_values = [global.xending,global.yending,false];
 			}
 		}else{
-			//current_list = instance_create_depth(1,1,1,linked_list);
 			add_node(current_list,instance_create_depth(1,1,1,node));
 			current_list.tail.post_values = [global.xending,global.yending,false];
 		}
@@ -166,9 +165,38 @@ else if init.job.infill == "cable"{
 		print_list(current_list);
 		
 		
+		//placing posts
 		while current_node != undefined{
 			if current_list.head == current_node{
-				array_insert(init.post_x_y,array_length(init.post_x_y),[current_node.post_values[0],current_node.post_values[1],0]);
+				//array_insert(init.post_x_y,array_length(init.post_x_y),[current_node.post_values[0],current_node.post_values[1],0]);
+				
+				if instance_exists(obj_post){
+					var nearest_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
+				}
+				else{
+					var nearest_post = linked_list;
+				}
+				
+				//head posts
+				if abs(nearest_post.x - current_node.post_values[0] ) < post_buffer and abs(nearest_post.y - current_node.post_values[1] ) < post_buffer{
+					var reused_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
+					show_debug_message("reused head post" + string(current_node.post_values));
+					reused_post.post_type = "1S";
+				}
+				else{ 
+					with(instance_create_depth(current_node.post_values[0],current_node.post_values[1],-10000,obj_post)){
+						post_type = "1S";
+						array_insert(init.post_x_y,array_length(init.post_x_y),[current_node.post_values[0],current_node.post_values[1],0]);
+						show_debug_message("Placed head post" + string(current_node.post_values));
+						init.posts.totalposts ++;
+						init.posts.os ++;
+					}
+					
+				}
+			}
+			
+			else if current_node.post_values[2] == true{//corners
+				//array_insert(init.post_x_y,array_length(init.post_x_y),[current_node.post_values[0],current_node.post_values[1],2]);
 				
 				if instance_exists(obj_post){
 					var nearest_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
@@ -179,31 +207,17 @@ else if init.job.infill == "cable"{
 				
 				if abs(nearest_post.x - current_node.post_values[0] ) < post_buffer and abs(nearest_post.y - current_node.post_values[1] ) < post_buffer{
 					var reused_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
-					show_debug_message("reused head post" + string(current_node.post_values));
-					reused_post.post_type = "1S";
-				}
-				else{ 
-					with(instance_create_depth(current_node.post_values[0],current_node.post_values[1],-10000,obj_post)){
-						post_type = "1S";
-						show_debug_message("Placed head post" + string(current_node.post_values));
-						init.posts.totalposts ++;
-						init.posts.os ++;
-					}
-					
-				}
-			}
-			
-			else if current_node.post_values[2] == true{//corners
-				array_insert(init.post_x_y,array_length(init.post_x_y),[current_node.post_values[0],current_node.post_values[1],2]);
-				if abs(nearest_post.x - current_node.post_values[0] ) < post_buffer and abs(nearest_post.y - current_node.post_values[1] ) < post_buffer{
-					var reused_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
 					show_debug_message("reused corner post" + string(current_node.post_values))
-					reused_post.post_type = "90";
-					init.posts.po ++;
+					if reused_post.post_type == "DT"{
+						init.posts.po ++;
+						init.posts.dt --;
+						reused_post.post_type = "90";
+					} else {reused_post.post_type = "90";}
 				}
 				else{
 					with(instance_create_depth(current_node.post_values[0],current_node.post_values[1],-10000,obj_post)){
 						post_type = "90";
+						array_insert(init.post_x_y,array_length(init.post_x_y),[current_node.post_values[0],current_node.post_values[1],2]);
 						show_debug_message("placed corner post" + string(current_node.post_values))
 						init.posts.totalposts ++;
 						init.posts.po ++;
@@ -213,7 +227,15 @@ else if init.job.infill == "cable"{
 			}
 			
 			else if current_list.tail == current_node{
-				array_insert(init.post_x_y,array_length(init.post_x_y),[current_node.post_values[0],current_node.post_values[1],3]);
+				//array_insert(init.post_x_y,array_length(init.post_x_y),[current_node.post_values[0],current_node.post_values[1],3]);
+				
+				if instance_exists(obj_post){
+					var nearest_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
+				}
+				else{
+					var nearest_post = linked_list;
+				}
+				
 				if abs(nearest_post.x - current_node.post_values[0] ) < post_buffer and abs(nearest_post.y - current_node.post_values[1] ) < post_buffer{
 					var reused_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
 					show_debug_message("reused tail post" + string(current_node.post_values))
@@ -222,6 +244,7 @@ else if init.job.infill == "cable"{
 				else{
 					with(instance_create_depth(current_node.post_values[0],current_node.post_values[1],-10000,obj_post)){
 						post_type = "DT";
+						array_insert(init.post_x_y,array_length(init.post_x_y),[current_node.post_values[0],current_node.post_values[1],3]);
 						show_debug_message("Placed tail post" + string(current_node.post_values));
 						init.posts.totalposts ++;
 						init.posts.dt ++;
@@ -231,6 +254,14 @@ else if init.job.infill == "cable"{
 			
 			//line posts
 			else{
+				
+				if instance_exists(obj_post){
+					var nearest_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
+				}
+				else{
+					var nearest_post = linked_list;
+				}
+				
 				if abs(nearest_post.x - current_node.post_values[0] ) < post_buffer and abs(nearest_post.y - current_node.post_values[1] ) < post_buffer{
 					var reused_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
 					show_debug_message("reused line post" + string(current_node.post_values))

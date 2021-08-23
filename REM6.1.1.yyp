@@ -216,6 +216,10 @@
     {"CopyToMask":-1,"filePath":"datafiles/help/static","resourceVersion":"1.0","name":"precisionrail_206x280.png","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"part_pricing_list.csv","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/help","resourceVersion":"1.0","name":"REM.pptx","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/Database updater","resourceVersion":"1.0","name":"inventory_scrape.py","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/Database updater","resourceVersion":"1.0","name":"test_db.py","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/Database updater","resourceVersion":"1.0","name":"parts_list.db","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/Database updater","resourceVersion":"1.0","name":"part_pricing_list.xlsx","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2.3.3.574",
