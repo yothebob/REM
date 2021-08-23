@@ -3,7 +3,6 @@ Features that would be nice to add:
 - make mobile app version
 - GUI facelift?
 - lerping on menus
-- add actual saving and opening , maybe ini file? 
 - email quote (needs to be secure)
 - when totaling maybe pull up a page with all the questions on one page (simular to a form)
 
@@ -14,11 +13,10 @@ items to create
 BUGS TO FIX:
 - FMPBS1 on csv reads from line 6. everything else reads from line 7...
 
-control + z undo was added. undo features only work with lines, text, rectangles.
-
-- lines,rectangles, text and posts are not drawing to surface until ready to save. I need to make everything else not draw 
-to the surface.
-
+automatic post layer for picket, cable and glass (need the folowing additonal features):
+	- be able to pick your rail type. give proper post spacing accordingly
+	- use cable post layer to measure the total length of runs. split cables according to length and fittings
+	
 
 	THINGS TO ADD TO INSTRUCTIONS
 		- explain what an end post is. 

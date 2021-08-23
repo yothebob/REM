@@ -73,7 +73,16 @@ if init.job.infill == "picket" or init.job.infill == "glass"{
 
 #region //drilled posts
 else if init.job.infill == "cable"{
-	// store each post in array as [x,y,corner]
+	/*
+	this tool is using linked lists (objects: linked_list, node) 
+	
+	The linked list object is keeping track of head AND tail
+	
+	Nodes are storing post values [x,y,corner(Boolean)], and next value
+	
+	NOTICE *This linked list does have a head and tails but can only be traversed from the head, I may alter if need be*
+	*/
+	
 	
 	if global.tool == tool.cable and global.measurement > 1 and mouse_check_button_released(mb_left){
 		
@@ -92,7 +101,7 @@ else if init.job.infill == "cable"{
 				if abs(init.post_x_y[i,0] - global.xstar) <= post_buffer and abs(init.post_x_y[i,1] -global.ystar) <= post_buffer{
 					need_start_post = false;
 					
-					//look through linked lists for an x,y matching node
+					//look through linked lists for an x,y matching node, if so reuse the head node as a corner
 					for (var ii = 0; ii < array_length(list_sections);ii++){
 						if list_sections[ii].head.post_values[0] == init.post_x_y[i,0] and list_sections[ii].head.post_values[1] == init.post_x_y[i,1]{
 							show_debug_message("found post")
@@ -155,20 +164,23 @@ else if init.job.infill == "cable"{
 			if need_end_post == true{
 				add_node(current_list,instance_create_depth(1,1,1,node));
 				current_list.tail.post_values = [global.xending,global.yending,false];
+				show_debug_message("added post");
 			}
 		}else{
 			add_node(current_list,instance_create_depth(1,1,1,node));
 			current_list.tail.post_values = [global.xending,global.yending,false];
+			show_debug_message("added post");
 		}
 	
 		var current_node = get_head_node(current_list)
 		print_list(current_list);
 		
 		
+		
 		//placing posts
 		while current_node != undefined{
-			if current_list.head == current_node{
-				//array_insert(init.post_x_y,array_length(init.post_x_y),[current_node.post_values[0],current_node.post_values[1],0]);
+			
+			if current_list.head == current_node{//head posts
 				
 				if instance_exists(obj_post){
 					var nearest_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
@@ -177,7 +189,6 @@ else if init.job.infill == "cable"{
 					var nearest_post = linked_list;
 				}
 				
-				//head posts
 				if abs(nearest_post.x - current_node.post_values[0] ) < post_buffer and abs(nearest_post.y - current_node.post_values[1] ) < post_buffer{
 					var reused_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
 					show_debug_message("reused head post" + string(current_node.post_values));
@@ -191,12 +202,11 @@ else if init.job.infill == "cable"{
 						init.posts.totalposts ++;
 						init.posts.os ++;
 					}
-					
+					end_posts ++;
 				}
 			}
 			
 			else if current_node.post_values[2] == true{//corners
-				//array_insert(init.post_x_y,array_length(init.post_x_y),[current_node.post_values[0],current_node.post_values[1],2]);
 				
 				if instance_exists(obj_post){
 					var nearest_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
@@ -211,6 +221,8 @@ else if init.job.infill == "cable"{
 					if reused_post.post_type == "DT"{
 						init.posts.po ++;
 						init.posts.dt --;
+						corner_posts ++;
+						end_posts --;
 						reused_post.post_type = "90";
 					} else {reused_post.post_type = "90";}
 				}
@@ -222,12 +234,11 @@ else if init.job.infill == "cable"{
 						init.posts.totalposts ++;
 						init.posts.po ++;
 					}
-					
+					corner_posts ++;
 				}
 			}
 			
-			else if current_list.tail == current_node{
-				//array_insert(init.post_x_y,array_length(init.post_x_y),[current_node.post_values[0],current_node.post_values[1],3]);
+			else if current_list.tail == current_node{//end post
 				
 				if instance_exists(obj_post){
 					var nearest_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
@@ -249,11 +260,12 @@ else if init.job.infill == "cable"{
 						init.posts.totalposts ++;
 						init.posts.dt ++;
 					}
+					end_posts ++;
 				}
 			}
 			
-			//line posts
-			else{
+		
+			else{//line posts
 				
 				if instance_exists(obj_post){
 					var nearest_post = instance_nearest(current_node.post_values[0],current_node.post_values[1],obj_post);
