@@ -5,7 +5,7 @@
   Precision Rail of Oregon's Residential estimating tool for Sales and Customers, deployable for desktop and as a web application.
  
 # Instructions
- For learning instructions please look at the ![powerpoint presentation](https://github.com/yothebob/REM/blob/main/datafiles/help/REM.pptx) 
+ For learning instructions please look at the ![powerpoint presentation](https://docs.google.com/presentation/d/1H3FQqyMfsmW55c9ikw4mH-cURdd2B8Tp/edit?usp=sharing&ouid=112901054954916064774&rtpof=true&sd=true) 
  or check out the ![offline manual](https://github.com/yothebob/REM/blob/main/datafiles/help/index.html). (Work in Progress)
  
  
