@@ -6,6 +6,10 @@
  
 # Instructions
  For learning instructions please look at the ![powerpoint presentation](https://github.com/yothebob/REM/blob/main/datafiles/help/REM.pptx) 
+ or check out the ![offline manual](https://github.com/yothebob/REM/blob/main/datafiles/help/index.html). (Work in Progress)
+ 
+ 
+ 
  
  ![posts drawing](https://user-images.githubusercontent.com/70663174/130639958-7eaca331-ed15-4483-b431-2330cf840a65.JPG)
 ![measuring](https://user-images.githubusercontent.com/70663174/130639978-bc8a384a-b28c-4b5f-aee8-1a4f51bf6c86.JPG)
