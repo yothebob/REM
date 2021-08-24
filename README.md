@@ -6,7 +6,7 @@
  
 # Instructions
  For learning instructions please look at the ![powerpoint presentation](https://docs.google.com/presentation/d/1H3FQqyMfsmW55c9ikw4mH-cURdd2B8Tp/edit?usp=sharing&ouid=112901054954916064774&rtpof=true&sd=true) 
- or check out the ![offline manual](https://github.com/yothebob/REM/blob/main/datafiles/help/index.html). (Work in Progress)
+ or check out the ![offline manual](https://drive.google.com/drive/folders/1uXLkxikcRBmiG2-vFTHEaDRnD7rYOJdk?usp=sharing). (Work in Progress)
  
  
  
