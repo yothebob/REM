@@ -2,12 +2,11 @@
  REM rebirthed, new code base and many new features. Adapted from REM 6.0.5.
  
 # About
-  Precision Rail of Oregon's Residential estimating tool for Sales and Customers, deployable for desktop and as a web application.
+  Precision Rail of Oregon's Residential estimating tool for Sales and Customers, deployable for desktop and as a web application. Written in GameMaker Studio 2 and needs to be imported and compiled in GameMaker Studio.
  
 # Instructions
- For learning instructions please look at the ![powerpoint presentation](https://docs.google.com/presentation/d/1H3FQqyMfsmW55c9ikw4mH-cURdd2B8Tp/edit?usp=sharing&ouid=112901054954916064774&rtpof=true&sd=true) 
- or check out the ![offline manual](https://drive.google.com/drive/folders/1uXLkxikcRBmiG2-vFTHEaDRnD7rYOJdk?usp=sharing). (Work in Progress)
- 
+ For learning instructions please look at the Powerpoint presentation for a quickstart guide or the offline manual for more in-depth info. (manual Work in Progress)
+ check out ![here](https://github.com/yothebob/REM/tree/main/datafiles/help) to download manual and powerpoint.
  
  
  
